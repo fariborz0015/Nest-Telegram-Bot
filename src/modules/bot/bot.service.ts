@@ -1,14 +1,21 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import TelegramBotType from 'node-telegram-bot-api';
+import TelegramBotType, { Message } from 'node-telegram-bot-api';
+import { PublicCommand } from 'src/enums/bot-enums/command/PuplicCommand.command';
+import { ExtractCommandPipe } from 'src/pipes/ExtractCommand.pipe';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const TelegramBot = require('node-telegram-bot-api');
 
 @Injectable()
 export class BotService implements OnModuleInit {
-  bot = new TelegramBot(this.configService.get('Bot.token'), { polling: true });
+  bot: TelegramBotType = new TelegramBot(this.configService.get('Bot.token'), {
+    polling: true,
+  });
 
-  constructor(private configService: ConfigService) {}
+  constructor(
+    private configService: ConfigService,
+    private readonly extractCommandPipe: ExtractCommandPipe,
+  ) {}
 
   onModuleInit() {
     this.bot.on(
@@ -18,17 +25,14 @@ export class BotService implements OnModuleInit {
         metadata: TelegramBotType.Metadata,
       ) => void,
     );
+
+    //adding public commands
+    this.bot.setMyCommands(PublicCommand.commands, PublicCommand.options);
   }
 
-  checkHasCorrectAccess(message: TelegramBotType.Message) {
-    if (message.chat.type !== 'private') {
-      throw new Error('You have not correct access');
-    }
-  }
-
-  private async onReceivedMessageHandler(message: TelegramBotType.Message) {
+  private async onReceivedMessageHandler(message: Message) {
     try {
-      this.checkHasCorrectAccess(message);
+      return true;
     } catch {
       await this.bot.sendMessage(
         message.chat.id,
@@ -37,6 +41,9 @@ export class BotService implements OnModuleInit {
     }
   }
 
+  async extractCommand(message: Message) {
+    return this.extractCommandPipe.transform(message);
+  }
   async sendMessage(
     chatId: TelegramBotType.ChatId,
     text: string,
