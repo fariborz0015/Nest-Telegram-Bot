@@ -6,8 +6,8 @@
 </p>
 
 [![Bot API](https://img.shields.io/badge/Bot%20API-v.7.1-00aced.svg?style=flat-square&logo=telegram)](https://core.telegram.org/bots/api)
-[![npm package](https://img.shields.io/npm/v/node-telegram-bot-api?logo=npm&style=flat-square)](https://www.npmjs.org/package/node-telegram-bot-api)
- 
+[![NestJS](https://img.shields.io/badge/Bot%20API-v.10.0.0-00aced.svg?style=flat-square&logo=nestjs)](https://nestjs.com/)
+[![node-telegram-bot-api](https://img.shields.io/badge/Node%20Telegram%20Bot%20API-v.0.65.1-00aced.svg?style=flat-square&logo=telegram)]([https://core.telegram.org/bots/api](https://www.npmjs.com/package/node-telegram-bot-api))
 
 # Nest.js Telegram Bot Bootostart
 
@@ -84,6 +84,16 @@ build
 ```
 
 
+# Features 
+- Bot command define structure 
+- Bot command match Pipes
+- Sample of inline button with calcback 
+- Sample of Reply to user message action
+- Sample of Develop other service using core service to make scaleble 
+- Sample of fast work with &nbsp; &nbsp;
+[![node-telegram-bot-api](https://img.shields.io/badge/Node%20Telegram%20Bot%20API-v.0.65.1-00aced.svg?style=flat-square&logo=telegram)]([https://core.telegram.org/bots/api](https://www.npmjs.com/package/node-telegram-bot-api)) 
+ 
+
 ## Contact
 For any questions or inquiries, please reach out to the project maintainer:
 
@@ -99,8 +109,4 @@ Happy coding! 👨‍💻
 
 - [@fariborz0015](https://www.github.com/fariborz0015)
 
-
-## Tech Stack
-
-[Nestjs](https://camo.githubusercontent.com/185fa4a995c155fffefe5b0db04f484ec69a80f7a72a89819e5f8d3be153601c/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f406e6573746a732f636f72652e737667)
-
+ 
