@@ -1,8 +1,7 @@
 
- 
 
 <p align="center">
-  <a href="https://github.com/fariborz0015/Nest-Telegram-Bot" target="blank"><img src="https://github.com/fariborz0015/Nest-Telegram-Bot/blob/master/public/cover.png?raw=true"  alt="Nest Logo" /></a>
+  <a href="https://github.com/fariborz0015/Nest-Telegram-Bot" target="blank"><img src="https://raw.githubusercontent.com/fariborz0015/Nest-Telegram-Bot/main/public/cover.png"  alt="Nest Logo" /></a>
 </p>
 
 [![Bot API](https://img.shields.io/badge/Bot%20API-v.7.1-00aced.svg?style=flat-square&logo=telegram)](https://core.telegram.org/bots/api)
