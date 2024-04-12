@@ -1,73 +1,106 @@
+
+ 
+
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  <a href="https://github.com/fariborz0015/Nest-Telegram-Bot" target="blank"><img src="https://github.com/fariborz0015/Nest-Telegram-Bot/blob/master/public/cover.png?raw=true"  alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+[![Bot API](https://img.shields.io/badge/Bot%20API-v.7.1-00aced.svg?style=flat-square&logo=telegram)](https://core.telegram.org/bots/api)
+[![npm package](https://img.shields.io/npm/v/node-telegram-bot-api?logo=npm&style=flat-square)](https://www.npmjs.org/package/node-telegram-bot-api)
+ 
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+# Nest.js Telegram Bot Bootostart
 
-## Description
+This project serves as a foundational framework for developing Telegram bots using Nest.js. It provides a streamlined structure and essential functionality for creating robust Telegram bots.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Purpose
+The purpose of this project is to offer a convenient starting point for developers who want to build Telegram bots with Nest.js. By leveraging Nest.js's powerful features and Telegram's API, developers can quickly create customized bots tailored to their specific requirements.
+Target 
 
-## Installation
+## Audience
+This project is intended for developers familiar with Nest.js and interested in building Telegram bots. Whether you're a beginner looking to get started or an experienced developer seeking a structured approach, this bootstrap offers the tools and guidelines necessary to kickstart your Telegram bot development journey.
 
-```bash
-$ npm install
-```
 
-## Running the app
 
-```bash
-# development
-$ npm run start
 
-# watch mode
-$ npm run start:dev
 
-# production mode
-$ npm run start:prod
-```
 
-## Test
+
+
+
+
+
+ 
+
+## Intallation  
+
+Clone the project
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+  git clone https://github.com/fariborz0015/Nest-Telegram-Bot.git
 ```
 
-## Support
+Go to the project directory
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```bash
+  cd Nest-Telegram-Bot
+```
 
-## Stay in touch
+Install dependencies
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+```bash
+  npm install
+```
+## Get Telegram Token  
 
-## License
 
-Nest is [MIT licensed](LICENSE).
+ - Start the BotFather from this link  [BotFather](https://t.me/BotFather) or `@BotFather` ID in Telegram 
+ - Click `/newbot` in chat 
+ - Enter the Bot Name 
+ - Then Enter the a uniq user name that ending with `bot` word 
+ - Copy the bot token from the botfather response 
+
+
+Go to the project directory in `/src/config/config.ts`
+replace the token in 
+
+```ts
+  const BotToken = registerAs(Configkeys.Bot, () => ({
+     token: <REPLACE_TOKEN_HERE>,
+  }));
+
+```
+## Run 
+
+Start the server as deveopment 
+
+```bash
+  npm run start
+```
+build 
+
+```bash
+  npm run build
+```
+
+
+## Contact
+For any questions or inquiries, please reach out to the project maintainer:
+
+ [![MIT License](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:Fariborz0015@gmail.com)
+ [![MIT License](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/fariborzjs)
+
+
+
+Feel free to open an issue on GitHub if you encounter any problems or have suggestions for improvement.
+
+Happy coding! 👨‍💻
+## Authors
+
+- [@fariborz0015](https://www.github.com/fariborz0015)
+
+
+## Tech Stack
+
+[Nestjs](https://camo.githubusercontent.com/185fa4a995c155fffefe5b0db04f484ec69a80f7a72a89819e5f8d3be153601c/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f406e6573746a732f636f72652e737667)
+
